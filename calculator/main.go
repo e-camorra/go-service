@@ -1,10 +1,10 @@
 package main
 
 import (
+	"github.com/labstack/echo/v4"
 	"net/http"
 	"os"
 
-	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )
 
@@ -25,7 +25,7 @@ func main() {
 
 	httpPort := os.Getenv("PORT")
 	if httpPort == "" {
-		httpPort = "8080"
+		httpPort = "8081"
 	}
 
 	e.Logger.Fatal(e.Start(":" + httpPort))
