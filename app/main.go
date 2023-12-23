@@ -1,11 +1,16 @@
 package main
 
 import (
-	"github.com/labstack/echo/v4"
 	"net/http"
 	"os"
 
+	"github.com/labstack/echo/v4"
+
 	"github.com/labstack/echo/v4/middleware"
+)
+
+const (
+	AlgorithmHS256 = "HS256"
 )
 
 func main() {
@@ -16,7 +21,7 @@ func main() {
 	e.Use(middleware.Recover())
 
 	e.GET("/", func(c echo.Context) error {
-		return c.HTML(http.StatusOK, "Hello, Docker! <3")
+		return c.HTML(http.StatusOK, "Hello, Docker! HUI")
 	})
 
 	e.GET("/health", func(c echo.Context) error {

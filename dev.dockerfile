@@ -7,9 +7,5 @@ WORKDIR /var/www/app
 COPY app/* ./
 RUN go mod download
 
-# Build
-RUN go build -o /app
-
 # Run
-CMD [ "/app" ]
-
+CMD go build -o /app ; /app

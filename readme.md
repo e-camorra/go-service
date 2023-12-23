@@ -17,11 +17,24 @@ You can make it truly simple
 ### There are all commands for simple managing application you can use:
 
 ```
-$ make up 
+$ make up-prod  
 ```
 
-* build docker image and start container via image was builded
+* build docker image for production and start container via image was builded
 * if image was already builded - command will just start you container
+
+```
+$ make up-dev 
+```
+
+* build docker image for development and start container via image was builded
+* if image was already builded - command will just start you container
+
+```
+$ make build-dev 
+```
+
+* restart container with new code base
 
 ```
 $ make down 
@@ -29,9 +42,3 @@ $ make down
 
 * stopping and removing container
 
-```
-$ make develop 
-``` 
-
-* allow you start development your project inside the container
-* for exit from container you can use "exit" command
